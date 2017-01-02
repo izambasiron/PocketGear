@@ -32,7 +32,11 @@ local.properties
 
 # VSCode
 .vscode/
+typings/
 tsconfig.json
+
+# Exponent
+.exponent/
 
 # node.js
 #
