@@ -1,24 +1,31 @@
 [ignore]
-; We fork some components by platform
+
+; We fork some components by platform.
 .*/*[.]android.js
 
-; Ignore templates for 'react-native init'
-.*/local-cli/templates/.*
+; Ignore templates with `@flow` in header
+.*/local-cli/generator.*
+
+; Ignore malformed json
+.*/node_modules/y18n/test/.*\.json
 
 ; Ignore the website subdir
 <PROJECT_ROOT>/website/.*
 
-; Ignore "BUCK" generated dirs
+; Ignore BUCK generated dirs
 <PROJECT_ROOT>/\.buckd/
 
-; Ignore unexpected extra "@providesModule"
-.*/node_modules/.*/node_modules/fbjs/.*
+; Ignore unexpected extra @providesModule
+.*/node_modules/commoner/test/source/widget/share.js
 
 ; Ignore duplicate module providers
-; For RN Apps installed via npm, "Libraries" folder is inside
-; "node_modules/react-native" but in the source repo it is in the root
+; For RN Apps installed via npm, "Libraries" folder is inside node_modules/react-native but in the source repo it is in the root
 .*/Libraries/react-native/React.js
 .*/Libraries/react-native/ReactNative.js
+.*/node_modules/fbemitter/lib/EmitterSubscription.js
+.*/node_modules/fbemitter/lib/EventSubscription.js
+.*/node_modules/fbemitter/lib/EventSubscriptionVendor.js
+.*/node_modules/jest-runtime/build/__tests__/.*
 
 ; Ignore libraries with broken flow
 .*/node_modules/react-navigation/.*

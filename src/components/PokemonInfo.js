@@ -105,6 +105,7 @@ const styles = StyleSheet.create({
 type Route = {
   key: string;
   title?: string;
+  testID?: string;
 }
 
 type Props = {
